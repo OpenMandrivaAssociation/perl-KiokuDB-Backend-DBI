@@ -1,9 +1,9 @@
 %define upstream_name    KiokuDB-Backend-DBI
-%define upstream_version 1.19
+%define upstream_version 1.20
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:    L<KiokuDB::TypeMap::Entry>
 License:    GPL+ or Artistic
