@@ -1,9 +1,9 @@
 %define upstream_name    KiokuDB-Backend-DBI
-%define upstream_version 1.20
+%define upstream_version 1.23
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	1
 
 Summary:	L<KiokuDB::TypeMap::Entry>
 License:	GPL+ or Artistic
@@ -53,12 +53,14 @@ BuildRequires:	perl(Test::Exception)
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Test::TempDir)
 BuildRequires:	perl(Test::use::ok)
+BuildRequires:  perl(Test::Requires)
 BuildRequires:	perl(Throwable)
 BuildRequires:	perl(Try::Tiny)
 BuildRequires:	perl(YAML::XS)
 BuildRequires:	perl(namespace::autoclean)
 BuildRequires:	perl(namespace::clean)
 BuildRequires:	perl(ok)
+BuildRequires:	perl(strictures)
 BuildArch:	noarch
 
 %description
@@ -83,33 +85,3 @@ perl Makefile.PL INSTALLDIRS=vendor
 %doc Changes META.yml LICENSE README META.json
 %{_mandir}/man3/*
 %{perl_vendorlib}/*
-
-%changelog
-* Mon May 09 2011 Guillaume Rousse <guillomovitch@mandriva.org> 1.200.0-1mdv2011.0
-+ Revision: 672853
-- update to new version 1.20
-
-* Sat Apr 23 2011 Funda Wang <fwang@mandriva.org> 1.190.0-2
-+ Revision: 657529
-- add br
-- rebuild for updated spec-helper
-
-* Thu Mar 10 2011 Guillaume Rousse <guillomovitch@mandriva.org> 1.190.0-1
-+ Revision: 643398
-- update to new version 1.19
-
-* Fri Jan 07 2011 Guillaume Rousse <guillomovitch@mandriva.org> 1.180.0-1mdv2011.0
-+ Revision: 629498
-- update to new version 1.18
-
-* Sun Dec 26 2010 Guillaume Rousse <guillomovitch@mandriva.org> 1.170.0-1mdv2011.0
-+ Revision: 625273
-- update to new version 1.17
-
-* Sun Aug 08 2010 Shlomi Fish <shlomif@mandriva.org> 1.150.0-1mdv2011.0
-+ Revision: 567584
-- import perl-KiokuDB-Backend-DBI
-
-
-* Thu Aug 05 2010 cpan2dist 1.15-1mdv
-- initial mdv release, generated with cpan2dist
